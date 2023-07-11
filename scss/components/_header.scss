@@ -1,0 +1,59 @@
+
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_superior {
+    background-color: $color-blackopacy;
+}
+
+
+.logo {
+    color: $color-title;
+    text-shadow: 1px 4px 5px black;
+    width: 50vh;
+}
+
+
+.icon__menu {
+    font-size: 26px;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label__check {
+    width: 26px;
+    height: 100%;
+}
+
+#check__menu{
+    display: none;
+}
+
+
+
+
+
+.header_superior {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200vh;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 20px;
+    z-index: 10;
+}
+
+body{
+    @include bodyback;
+}
+

@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header_superior {
+  background-color: rgba(8, 7, 7, 0.9176470588);
+}
+
+.logo {
+  color: rgb(199, 199, 199);
+  text-shadow: 1px 4px 5px black;
+  width: 50vh;
+}
+
+.icon__menu {
+  font-size: 26px;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#label__check {
+  width: 26px;
+  height: 100%;
+}
+
+#check__menu {
+  display: none;
+}
+
+.header_superior {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200vh;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 20px;
+  z-index: 10;
+}
+
+body {
+  background-image: url(/img/ropa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search {
+  background-color: rgba(235, 16, 255, 0.2588235294);
+  height: 40px;
+  border-radius: 20px;
+}
+.search input {
+  background-image: url(/img/fucsia.jpg);
+  width: 30vh;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+::placeholder {
+  text-align: center;
+  width: 100%;
+  color: gold;
+  text-shadow: 0px 1px 2px black;
+}
+
+.container__menu {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/fucsia.jpg);
+  box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
+  padding: 0px 20px;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+nav {
+  background-image: url(/img/fucsia.jpg);
+  height: 100%;
+}
+
+nav > ul {
+  height: 100%;
+  display: flex;
+}
+nav > ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+nav > ul > li > a {
+  background-image: url(/img/fucsia.jpg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: rgb(238, 238, 238);
+  font-weight: 500;
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
+}
+nav > ul > li > a:hover {
+  color: gold;
+  font-weight: 500;
+  text-shadow: 1px 3px 2px #080707;
+  transform: scale(1.2);
+  background-image: url(/img/fucsia.jpg);
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  z-index: 10;
+}
+
+nav ul li ul {
+  background-color: rgba(247, 92, 195, 0.856);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/img/fucsia.jpg);
+  box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
+  position: absolute;
+  margin-top: 90px;
+  left: -5px;
+  padding: 14px 0px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: all 300ms ease;
+  list-style: none;
+  z-index: 10;
+}
+nav ul li:hover ul {
+  background-image: url(/img/fucsia.jpg);
+  visibility: visible;
+  opacity: 1;
+  top: 70px;
+  list-style: none;
+  margin: 0;
+  z-index: 10;
+}
+nav ul li ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid fuchsia;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+nav > ul > li > ul > li > a {
+  display: block;
+  color: rgb(238, 238, 238);
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+  padding: 6px;
+  margin-left: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+nav > ul > li > ul > li > a:hover {
+  background-image: url(/img/fucsia.jpg);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  color: gold;
+  text-shadow: 0, 0, 0;
+  transform: scale(1.1);
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: 0, 0, 0;
+  z-index: 10;
+}
+
+nav ul {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200vh;
+  padding: 20px;
+  z-index: 10;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  scroll-margin-bottom: -10px;
+  background-color: rgba(8, 7, 7, 0.9176470588);
+  padding: 30px;
+  z-index: 10;
+}
+.footer img {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 4em;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 80%;
+    background-color: rgba(8, 7, 7, 0.9176470588);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+  }
+  .footer img {
+    width: 100%;
+  }
+}
+.gallery {
+  z-index: -1;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-right: 70px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 32px;
+}
+.gallery img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 30px black;
+  z-index: -1;
+}
+.gallery img:hover {
+  opacity: 100;
+  margin-left: 50px;
+  width: 200px;
+  background-color: rgba(209, 209, 209, 0.37);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+button {
+  background-color: rgba(233, 126, 255, 0.568);
+  cursor: pointer;
+  border: none;
+  padding: 10px 22px;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 1px 5px 5px #080707;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+}
+
+p {
+  width: 100px;
+  margin-top: 0px;
+  font-weight: 600;
+  margin-left: 100px;
+  text-align: center;
+  color: #080707;
+  padding: 20px 10px 20px 10px;
+  border: #080707;
+  z-index: 100;
+}
+p title {
+  font-size: larger;
+  font-weight: 900;
+}
+
+section {
+  margin-top: 200px;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+section div {
+  z-index: 0;
+}
+
+.pic_one {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-image: url(/img/mujer/Animalprinttigre.png);
+  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.pic_one:hover::after {
+  transform: translateY(0);
+}
+
+.pic_one::after {
+  content: "Nuevo Ingreso";
+  font-size: 2rem;
+  color: rgb(238, 238, 238);
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+  background-color: rgba(255, 0, 255, 0.219);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.pic_two {
+  margin-left: 50%;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-image: url(/img/mujer/Beigeblanco.png);
+  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.pic_two:hover::after {
+  transform: translateY(0);
+}
+
+.pic_two::after {
+  content: "Nuevo Ingreso";
+  font-size: 2rem;
+  color: rgb(238, 238, 238);
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+  background-color: rgba(255, 0, 255, 0.219);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+  z-index: -10;
+}
+
+.pic_three {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-image: url(/img/mujer/Narynegro.png);
+  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.pic_three:hover::after {
+  transform: translateY(0);
+}
+
+.pic_three::after {
+  content: "Nuevo Ingreso";
+  font-size: 2rem;
+  color: rgb(238, 238, 238);
+  text-shadow: 1px 3px 2px rgb(0, 0, 0);
+  background-color: rgba(255, 0, 255, 0.219);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.logo {
+  color: rgb(199, 199, 199);
+  text-shadow: 1px 4px 5px black;
+}
+
+.bd__contact {
+  margin-bottom: 100px;
+  margin-top: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form {
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: flex;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+label {
+  color: rgb(2, 2, 1);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: rgb(252, 58, 9);
+  border: 2px solid rgb(4, 0, 8);
+  background-color: rgb(2, 14, 10);
+  outline: none;
+}
+
+input::placeholder textarea::placeholder {
+  color: rgb(231, 7, 252);
+}
+
+.form-txt {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.form-txt a {
+  color: rgb(116, 31, 14);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 16px;
+  color: rgb(8, 5, 1);
+  border: 0;
+  border-radius: 25px;
+  background-color: gold;
+  box-shadow: 0 0 20px rgba(4, 14, 3, 0.4);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(253, 7, 81);
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 30px;
+  }
+  form {
+    padding: 50px 30px;
+    width: 100%;
+  }
+  input {
+    padding: 15px;
+  }
+}
+h1 {
+  color: rgb(255, 27, 236);
+  text-shadow: 5px 2px 5px #080707;
+  font-size: 6vh;
+  font-weight: 800;
+  margin-left: 46%;
+  width: 100px;
+}
+
+.gallery {
+  margin-top: 200px;
+  margin-right: 200px;
+  margin-left: -10;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: rgb(255, 27, 236);
+  text-shadow: 5px 2px 5px #080707;
+  font-size: 6vh;
+  font-weight: 800;
+  margin-left: 0px;
+  width: 10px;
+}
+
+.gallery {
+  margin-top: 200px;
+  margin-right: 200px;
+  margin-left: -10;
+}
+
+/*# sourceMappingURL=style.css.map */

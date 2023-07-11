@@ -1,0 +1,29 @@
+$color-title: rgb(199, 199, 199);
+
+$color-blackopacy: #080707ea;
+
+$color-white: rgb(238, 238, 238);
+
+$color-black: rgb(0, 0, 0);
+
+$color-fucsia: rgba(247, 92, 195, 0.856);
+
+$color-aqua: aqua;
+
+$color-gold: gold;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin background {
+    background-image: url(/img/fucsia.jpg);
+}
+
+@mixin bodyback {
+    background-image: url(/img/ropa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
