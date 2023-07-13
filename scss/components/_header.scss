@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
 }
@@ -13,7 +13,7 @@ header {
 
 
 .logo {
-    color: $color-title;
+    @include background;
     text-shadow: 1px 4px 5px black;
     width: 50vh;
 }

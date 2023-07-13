@@ -4,15 +4,15 @@
 
 
 
-.gallery {
-    z-index: -1;
-    margin-top: 80px;
+.gallery { 
+    margin-top: -10px;
     margin-bottom: 100px;
     margin-right: 70px;
     margin-left: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 32px;
+    z-index: -1;
         img {
             border-radius: 8px;
             width: 100%;
@@ -20,28 +20,31 @@
             box-shadow: 0px 0px 30px black;
             z-index: -1;
             &:hover{
-                opacity: 100;
-                margin-left: 50px;
-                width: 200px;
+                opacity: 1;
+                filter: drop-shadow(1px 5px 5px black);
+                margin-left: 0px;
+                width: 150px;
                 background-color: rgba(209, 209, 209, 0.37);
                 transform: scale(1.1);
-                z-index: -1;
+                z-index: -10;
                 }
         }
     }
 
 
 button {
-    background-color: rgba(233, 126, 255, 0.568);
+    margin-top: 30px;
+    @include background;
     cursor: pointer;
     border: none;
-    padding: 10px 22px;
+    padding: 1px 2px;
     color: #ffffff;
     font-size: 20px;
     box-shadow: 1px 5px 5px#080707;
     font-weight: bold;
     position: relative;
     border-radius: 12px;
+    z-index: -1;
 }
 
 
@@ -49,18 +52,20 @@ button {
 
 
 
-
-p {
-    width: 100px;
-    margin-top: 0px;
+span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 2px 1px black;
+    width: 70px;
+    margin-top: 10px;
     font-weight: 600;
-    margin-left: 100px;
+    margin-left: 10px;
     text-align: center;
-    color: #080707;
+    color: #cacaca;
     padding: 20px 10px 20px 10px;
     border: #080707;
     z-index: 100;
     title {
+        font-family: fantasy;
         font-size: larger;
         font-weight: 900;
     }
