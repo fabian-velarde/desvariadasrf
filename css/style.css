@@ -6,21 +6,78 @@
   list-style: none;
 }
 
+body {
+  margin-top: -50px;
+  background-image: url(/img/ropa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery {
+  margin-top: 10%;
+  margin-bottom: 100px;
+  margin-right: 70px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 32px;
+  z-index: -1;
+}
+.gallery img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 30px black;
+  z-index: -1;
+}
+.gallery img:hover {
+  box-shadow: 1px 1px 10px 10px #fc0758;
+}
+
+span {
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-shadow: 1px 2px 1px black;
+  width: 50px;
+  font-weight: 600;
+  margin-left: 10px;
+  text-align: center;
+  color: #cacaca;
+  padding: 20px 10px 20px 10px;
+  border: #080707;
+  z-index: 100;
+}
+
+button {
+  margin-top: 30px;
+  background-image: url(/img/fucsia.jpg);
+  cursor: pointer;
+  border: none;
+  padding: 1px 2px;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 1px 5px 5px #080707;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+h1 {
+  margin-left: 1em;
+  margin-top: -5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  color: rgb(228, 226, 226);
+  text-shadow: 1px 5px 5px black;
+  z-index: 10;
+}
+
 header {
   width: 100%;
-  position: static;
+  position: sticky;
   top: 0;
   left: 0;
-}
-
-.header_superior {
-  background-color: rgba(8, 7, 7, 0.9176470588);
-}
-
-.logo {
-  background-image: url(/img/fucsia.jpg);
-  text-shadow: 1px 4px 5px black;
-  width: 50vh;
 }
 
 .icon__menu {
@@ -30,15 +87,6 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-#label__check {
-  width: 26px;
-  height: 100%;
-}
-
-#check__menu {
-  display: none;
 }
 
 .header_superior {
@@ -53,44 +101,115 @@ header {
   z-index: 10;
 }
 
-body {
-  background-image: url(/img/ropa.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.search {
+  display: flex;
+  justify-content: end;
+  margin-right: -10px;
 }
 
 div {
-  height: 100px;
+  background-image: url(/img/fucsia.jpg);
+  height: 70px;
   border-radius: 20px;
 }
 div input {
+  height: 40px;
+  margin-top: -1px;
+  text-transform: uppercase;
+  color: gold;
+  text-shadow: 1px 2px 1px black;
+  font-weight: 700;
   margin-left: 200px;
   background-image: url(/img/fucsia.jpg);
-  width: 20vh;
+  width: 30vh;
   padding: 10px;
   border-radius: 20px;
 }
 
 ::placeholder {
-  display: flex;
-  justify-content: end;
-  align-content: end;
   text-align: center;
   width: 100%;
   color: gold;
   text-shadow: 0px 1px 2px black;
 }
 
+.icon__menu {
+  font-size: 26px;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+#check__menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .search input {
+    display: none;
+  }
+  .header__superior {
+    padding: 10px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  nav > ul {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 55px;
+    width: 30%;
+    height: 100px;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  ul .sub__menu {
+    width: 150px;
+  }
+  nav > ul > li > a:hover {
+    transform: scale(1);
+  }
+  nav ul li ul {
+    left: 50px;
+  }
+  nav > ul > li:hover ul {
+    top: 50px;
+  }
+  nav > ul > li:first-child a {
+    background-position: 120px;
+  }
+  #selected {
+    transform: scale(1);
+  }
+  #label__check {
+    display: block;
+  }
+  .icon__menu {
+    display: flex;
+  }
+  #check__menu:checked ~ nav > ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .container__menu {
+  margin-top: -70px;
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
-  height: 100%;
-  background-image: url(/img/fucsia.jpg);
-  box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
-  padding: 0px 20px;
-  z-index: 10;
+  height: 10%;
 }
 
 .menu {
@@ -99,24 +218,22 @@ div input {
   align-content: center;
   max-width: 1200px;
   margin: auto;
-  height: 100%;
+  height: 10%;
 }
 
 nav {
-  background-image: url(/img/fucsia.jpg);
-  height: 100%;
-  z-index: 10;
+  margin-top: 50px;
 }
 
 nav > ul {
   height: 100%;
   display: flex;
+  justify-content: space-between;
 }
 nav > ul li {
   height: 100%;
   list-style: none;
   position: relative;
-  z-index: 10;
 }
 
 nav > ul > li > a {
@@ -145,11 +262,12 @@ nav > ul > li > a:hover {
 }
 
 nav ul li ul {
-  background-color: rgba(247, 92, 195, 0.856);
+  background-color: rgba(8, 7, 7, 0.631372549);
+  box-shadow: 0px 5px 1px 1px rgb(1, 2, 1);
+  border-radius: 15px;
   width: 200px;
   display: flex;
   flex-direction: column;
-  background-image: url(/img/fucsia.jpg);
   box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
   position: absolute;
   margin-top: 90px;
@@ -163,7 +281,6 @@ nav ul li ul {
   z-index: 10;
 }
 nav ul li:hover ul {
-  background-image: url(/img/fucsia.jpg);
   visibility: visible;
   opacity: 1;
   top: 70px;
@@ -171,21 +288,10 @@ nav ul li:hover ul {
   margin: 0;
   z-index: 10;
 }
-nav ul li ul:before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid fuchsia;
-  position: absolute;
-  top: -12px;
-  left: 20px;
-  z-index: 10;
-}
 
 nav > ul > li > ul > li > a {
   display: block;
+  border-radius: 15px;
   color: rgb(238, 238, 238);
   text-shadow: 1px 3px 2px rgb(0, 0, 0);
   padding: 6px;
@@ -220,23 +326,34 @@ nav ul {
 }
 
 .footer {
+  margin-top: 0%;
+  height: 200px;
   display: flex;
   justify-content: space-around;
-  scroll-margin-bottom: -10px;
-  background-color: rgba(8, 7, 7, 0.9176470588);
-  padding: 30px;
+  scroll-margin-bottom: 50px;
+  background-color: rgba(8, 7, 7, 0.631372549);
+  padding: 10px;
   z-index: 10;
 }
-.footer img {
+.footer a img {
+  margin-top: -40%;
   margin-left: 20px;
   margin-right: 20px;
-  width: 4em;
+  width: 20em;
+}
+
+.whatsapp {
+  margin-top: 0.5%;
+}
+
+.instagram {
+  margin-top: 1%;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
     margin-top: 80%;
-    background-color: rgba(8, 7, 7, 0.9176470588);
+    background-color: rgba(8, 7, 7, 0.631372549);
     padding: 30px;
     display: flex;
     justify-content: space-around;
@@ -246,75 +363,21 @@ nav ul {
     width: 100%;
   }
 }
-.gallery {
-  margin-top: -10px;
-  margin-bottom: 100px;
-  margin-right: 70px;
-  margin-left: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 32px;
-  z-index: -1;
-}
-.gallery img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  box-shadow: 0px 0px 30px black;
-  z-index: -1;
-}
-.gallery img:hover {
-  opacity: 1;
-  filter: drop-shadow(1px 5px 5px black);
-  margin-left: 0px;
-  width: 150px;
-  background-color: rgba(209, 209, 209, 0.37);
-  transform: scale(1.1);
+section {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  display: flex;
   z-index: -10;
 }
 
-button {
-  margin-top: 30px;
-  background-image: url(/img/fucsia.jpg);
-  cursor: pointer;
-  border: none;
-  padding: 1px 2px;
-  color: #ffffff;
-  font-size: 20px;
-  box-shadow: 1px 5px 5px #080707;
-  font-weight: bold;
-  position: relative;
-  border-radius: 12px;
-  z-index: -1;
+h1 {
+  margin-left: -10px;
 }
 
-span {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-shadow: 1px 2px 1px black;
-  width: 70px;
-  margin-top: 10px;
-  font-weight: 600;
-  margin-left: 10px;
-  text-align: center;
-  color: #cacaca;
-  padding: 20px 10px 20px 10px;
-  border: #080707;
-  z-index: 100;
-}
-span title {
-  font-family: fantasy;
-  font-size: larger;
-  font-weight: 900;
-}
-
-section {
-  margin-top: 200px;
-  margin-bottom: 50px;
-  display: flex;
-}
-
-section div {
-  z-index: 0;
+.pic_one {
+  background-size: cover;
+  width: 100px;
+  height: 10px;
 }
 
 .pic_one {
@@ -322,7 +385,7 @@ section div {
   height: 400px;
   margin: 0 auto;
   margin-top: 50px;
-  background-image: url(/img/mujer/Animalprinttigre.png);
+  background-image: url(/img/mujer/campera\ jogger\ rosa.jpg);
   filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
   background-size: cover;
   background-position: center;
@@ -349,13 +412,13 @@ section div {
 
 .pic_two {
   margin-left: 50%;
-  width: 300px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   margin: 0 auto;
-  margin-top: 50px;
-  background-image: url(/img/mujer/Beigeblanco.png);
+  margin-top: 20px;
+  background-image: url(/img/Picsart_23-06-27_02-46-46-307.png);
   filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
-  z-index: -1;
+  z-index: -10;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -380,12 +443,29 @@ section div {
   z-index: -10;
 }
 
+@media screen and (max-width: 768px) {
+  .pic_one {
+    z-index: -10;
+  }
+  .pic_two {
+    display: none;
+  }
+  section {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .pic_three {
+    z-index: -10;
+  }
+}
 .pic_three {
   width: 300px;
   height: 400px;
   margin: 0 auto;
   margin-top: 50px;
-  background-image: url(/img/mujer/Narynegro.png);
+  background-image: url(/img/mujer/sweater\ verde.jpg);
   filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
   background-size: cover;
   background-position: center;
@@ -408,6 +488,7 @@ section div {
   place-items: center;
   transform: translateY(100%);
   transition: transform 0.3s;
+  z-index: -10;
 }
 
 .logo {
@@ -504,37 +585,6 @@ input::placeholder textarea::placeholder {
   input {
     padding: 15px;
   }
-}
-h1 {
-  color: rgb(255, 27, 236);
-  text-shadow: 5px 2px 5px #080707;
-  font-size: 6vh;
-  font-weight: 800;
-  margin-left: 46%;
-  width: 100px;
-}
-
-.gallery {
-  margin-top: 200px;
-  margin-right: 200px;
-  margin-left: -10;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-shadow: 5px 2px 5px #080707;
-  font-size: 6vh;
-  font-weight: 800;
-  margin-left: 0px;
-  width: 10px;
-}
-
-.gallery {
-  margin-top: 200px;
-  margin-right: 200px;
-  margin-left: -10;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,35 @@
 .footer{
+    margin-top: 0%;
+    height: 200px;
     display: flex;
     justify-content: space-around;
-    scroll-margin-bottom: -10px;
+    scroll-margin-bottom: 50px;
     background-color: $color-blackopacy;
-    padding: 30px;
+    padding: 10px;
     z-index: 10;
-    img{
+    a {
+    img{ 
+        margin-top: -40%;
         margin-left: 20px;
         margin-right: 20px;
-        width: 4em;
+        width: 20em;
+        }
     }
 }
+
+
+
+
+
+.whatsapp {
+    margin-top: 0.5%;
+}
+
+.instagram { 
+    margin-top: 1%;
+
+}
+
 
 @media screen and (max-width: 768px) {
     .footer{
