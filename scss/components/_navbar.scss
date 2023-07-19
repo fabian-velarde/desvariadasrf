@@ -1,6 +1,7 @@
     //   RESPONSIVE  //
     
     .icon__menu {
+        visibility: hidden;
         font-size: 26px;
         cursor: pointer;
         width: 26px;
@@ -22,8 +23,51 @@
     
 
 @media screen and (max-width: 768px){
+
+//  SUB MENU  responsive //
+
+.icon__menu{        
+    display: flex;
+    visibility: visible;
+}
+
+   nav {
+        ul {
+            li {
+                ul {
+                    background-color: $color-blackopacy;
+                    box-shadow: 0px 5px 1px 1px rgb(1, 2, 1);
+                    border-radius: 15px;
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
+                    position: absolute;
+                    margin-top: 50px;
+                    left: 10px;
+                    padding: 14px 0px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 300ms ease;
+                    list-style: none;
+                    z-index: 10;
+                }
+                &:hover{
+                    ul {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 70px;
+                        list-style: none;
+                        margin: 0;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
     
-    
+
+
     .search input{
         display: none;
     }
@@ -40,23 +84,24 @@
     nav > ul{
         flex-direction: column;
         position: fixed;
-        left: 0;
-        top: 55px;
-        width: 30%;
+        left: 10px;
+        top: 80px;
+        width: 50%;
         height: 100px;
         transition: all 300ms ease;
         opacity: 0;
         visibility: hidden;
 }
 
-
-ul .sub__menu {
+.sub__menu {
     width: 150px;
+    margin-right: -200px;
 }
 
 
     nav > ul > li > a:hover{
         transform: scale(1);
+        margin-left: 100px;
     }
 
     nav ul li ul {
@@ -71,8 +116,10 @@ ul .sub__menu {
         background-position: 120px;
     }
     
-
-
+    .icon__menu{
+        visibility: visible;
+    }
+    
 
 
     
@@ -84,9 +131,7 @@ ul .sub__menu {
         display: block;
     }
     
-    .icon__menu{
-        display: flex;
-    }
+
 
     #check__menu:checked ~ nav > ul{
         height: 300px;
@@ -95,11 +140,13 @@ ul .sub__menu {
     }
 }
 
+//--------FIN RESPONSIVE---------//
+
  //  BARRA MENU  //
 
 
 .container__menu {
-    margin-top: -70px;
+    margin-top: -100px;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -107,7 +154,9 @@ ul .sub__menu {
         height: 10%;
     }
     
-    
+    label{
+        margin-top: 20px;
+    }
     
     .menu{
         display: flex;
@@ -115,12 +164,12 @@ ul .sub__menu {
         align-content: center;
         max-width: 1200px;
         margin: auto;
-        height: 10%;
+        height: 100%;
     }
     
     
     nav{
-        margin-top: 50px;
+        margin-top: 90px;
     }
     
     
@@ -186,12 +235,11 @@ ul .sub__menu {
                     flex-direction: column;
                     box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
                     position: absolute;
-                    margin-top: 90px;
-                    left: -5px;
+                    margin-top: 50px;
+                    left: 0px;
                     padding: 14px 0px;
                     visibility: hidden;
                     opacity: 0;
-                    z-index: 10;
                     transition: all 300ms ease;
                     list-style: none;
                     z-index: 10;
@@ -206,18 +254,6 @@ ul .sub__menu {
                         z-index: 10;
                     }
                 }
-                // ul:before {
-                //     content:"";
-                //     width: 0;
-                //     height: 0;
-                //     border-left: 12px solid transparent;
-                //     border-right: 12px solid transparent;
-                //     border-bottom: 12px solid rgba(160, 0, 80, 0.644);
-                //     position: absolute;
-                //     top: -12px;
-                //     left: 20px;
-                //     z-index: 10;
-                // }
             }
         }
     }
@@ -240,7 +276,7 @@ ul .sub__menu {
                             text-shadow: 1px 3px 2px rgb(0, 0, 0);
                             padding: 6px;
                             margin-left: 14px;
-                            margin-top: 10px;
+                            margin-top: 0px;
                             font-size: 14px;
                             text-transform: uppercase;
                             transition: all 300ms ease;

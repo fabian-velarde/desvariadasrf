@@ -3,8 +3,9 @@
 //_____BODY_GALERIA__//
 
 body{
-    margin-top: -50px;
+    margin-top: -5px;
     @include bodyback;
+    margin-bottom: 50px;
 }
 
 .gallery { 

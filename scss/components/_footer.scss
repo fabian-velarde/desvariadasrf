@@ -1,19 +1,26 @@
 .footer{
-    margin-top: 0%;
-    height: 200px;
+    margin-top: 5%;
+    position: sticky;
     display: flex;
     justify-content: space-around;
-    scroll-margin-bottom: 50px;
     background-color: $color-blackopacy;
-    padding: 10px;
-    z-index: 10;
-    a {
-    img{ 
-        margin-top: -40%;
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 20em;
-        }
+}
+
+img{ 
+    width: 200px;
+    height: 50px;
+    &:hover{
+        scale: 1.2;
+        filter: contrast(2);
+        filter: drop-shadow(5px 5px 10px black);
+    }
+}
+
+span{ 
+    color: aqua;
+    width: 100px;
+    &:hover{
+        scale: 1.2;
     }
 }
 
@@ -21,27 +28,25 @@
 
 
 
-.whatsapp {
-    margin-top: 0.5%;
-}
 
-.instagram { 
-    margin-top: 1%;
-
-}
-
-
-@media screen and (max-width: 768px) {
-    .footer{
-        margin-top: 80%;
-        background-color: $color-blackopacy;
-        padding: 30px;
+@media screen and (max-width: 768px){ 
+    .footer{ 
         display: flex;
-        justify-content: space-around;
-        z-index: 10;
-        img{
-            width: 100%;
-        }
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .instagram{
+        width: 200px;
+    }
+    .facebook{
+        width: 200px;
+    }
+    .whatsapp{
+        width: 200px;
+    }
+    span{
+        width: 600px;
     }
 }
 

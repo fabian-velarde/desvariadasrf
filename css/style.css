@@ -7,10 +7,11 @@
 }
 
 body {
-  margin-top: -50px;
+  margin-top: -5px;
   background-image: url(/img/ropa.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 50px;
 }
 
 .gallery {
@@ -75,7 +76,7 @@ h1 {
 
 header {
   width: 100%;
-  position: sticky;
+  position: static;
   top: 0;
   left: 0;
 }
@@ -134,6 +135,7 @@ div input {
 }
 
 .icon__menu {
+  visibility: hidden;
   font-size: 26px;
   cursor: pointer;
   width: 26px;
@@ -153,6 +155,36 @@ div input {
 }
 
 @media screen and (max-width: 768px) {
+  .icon__menu {
+    display: flex;
+    visibility: visible;
+  }
+  nav ul li ul {
+    background-color: rgba(8, 7, 7, 0.631372549);
+    box-shadow: 0px 5px 1px 1px rgb(1, 2, 1);
+    border-radius: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
+    position: absolute;
+    margin-top: 50px;
+    left: 10px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    list-style: none;
+    z-index: 10;
+  }
+  nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+    list-style: none;
+    margin: 0;
+    z-index: 10;
+  }
   .search input {
     display: none;
   }
@@ -165,19 +197,21 @@ div input {
   nav > ul {
     flex-direction: column;
     position: fixed;
-    left: 0;
-    top: 55px;
-    width: 30%;
+    left: 10px;
+    top: 80px;
+    width: 50%;
     height: 100px;
     transition: all 300ms ease;
     opacity: 0;
     visibility: hidden;
   }
-  ul .sub__menu {
+  .sub__menu {
     width: 150px;
+    margin-right: -200px;
   }
   nav > ul > li > a:hover {
     transform: scale(1);
+    margin-left: 100px;
   }
   nav ul li ul {
     left: 50px;
@@ -188,14 +222,14 @@ div input {
   nav > ul > li:first-child a {
     background-position: 120px;
   }
+  .icon__menu {
+    visibility: visible;
+  }
   #selected {
     transform: scale(1);
   }
   #label__check {
     display: block;
-  }
-  .icon__menu {
-    display: flex;
   }
   #check__menu:checked ~ nav > ul {
     height: 300px;
@@ -204,12 +238,16 @@ div input {
   }
 }
 .container__menu {
-  margin-top: -70px;
+  margin-top: -100px;
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
   height: 10%;
+}
+
+label {
+  margin-top: 20px;
 }
 
 .menu {
@@ -218,11 +256,11 @@ div input {
   align-content: center;
   max-width: 1200px;
   margin: auto;
-  height: 10%;
+  height: 100%;
 }
 
 nav {
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 nav > ul {
@@ -270,12 +308,11 @@ nav ul li ul {
   flex-direction: column;
   box-shadow: 0px 0px 1px 0px rgb(1, 2, 1);
   position: absolute;
-  margin-top: 90px;
-  left: -5px;
+  margin-top: 50px;
+  left: 0px;
   padding: 14px 0px;
   visibility: hidden;
   opacity: 0;
-  z-index: 10;
   transition: all 300ms ease;
   list-style: none;
   z-index: 10;
@@ -296,7 +333,7 @@ nav > ul > li > ul > li > a {
   text-shadow: 1px 3px 2px rgb(0, 0, 0);
   padding: 6px;
   margin-left: 14px;
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 14px;
   text-transform: uppercase;
   transition: all 300ms ease;
@@ -326,172 +363,148 @@ nav ul {
 }
 
 .footer {
-  margin-top: 0%;
-  height: 200px;
+  margin-top: 5%;
+  position: sticky;
   display: flex;
   justify-content: space-around;
-  scroll-margin-bottom: 50px;
   background-color: rgba(8, 7, 7, 0.631372549);
-  padding: 10px;
-  z-index: 10;
-}
-.footer a img {
-  margin-top: -40%;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 20em;
 }
 
-.whatsapp {
-  margin-top: 0.5%;
+img {
+  width: 200px;
+  height: 50px;
+}
+img:hover {
+  scale: 1.2;
+  filter: contrast(2);
+  filter: drop-shadow(5px 5px 10px black);
 }
 
-.instagram {
-  margin-top: 1%;
+span {
+  color: aqua;
+  width: 100px;
+}
+span:hover {
+  scale: 1.2;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    margin-top: 80%;
-    background-color: rgba(8, 7, 7, 0.631372549);
-    padding: 30px;
     display: flex;
-    justify-content: space-around;
-    z-index: 10;
-  }
-  .footer img {
+    flex-direction: column;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .instagram {
+    width: 200px;
+  }
+  .facebook {
+    width: 200px;
+  }
+  .whatsapp {
+    width: 200px;
+  }
+  span {
+    width: 600px;
   }
 }
 section {
-  margin-top: 0px;
-  margin-bottom: 5px;
-  display: flex;
-  z-index: -10;
-}
-
-h1 {
-  margin-left: -10px;
-}
-
-.pic_one {
-  background-size: cover;
-  width: 100px;
-  height: 10px;
-}
-
-.pic_one {
-  width: 300px;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-image: url(/img/mujer/campera\ jogger\ rosa.jpg);
-  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-.pic_one:hover::after {
-  transform: translateY(0);
-}
-
-.pic_one::after {
-  content: "Nuevo Ingreso";
-  font-size: 2rem;
-  color: rgb(238, 238, 238);
-  text-shadow: 1px 3px 2px rgb(0, 0, 0);
-  background-color: rgba(255, 0, 255, 0.219);
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-}
-
-.pic_two {
-  margin-left: 50%;
-  width: 500px;
+  margin-left: -15%;
   height: 500px;
-  margin: 0 auto;
-  margin-top: 20px;
-  background-image: url(/img/Picsart_23-06-27_02-46-46-307.png);
-  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
-  z-index: -10;
-  background-size: cover;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 600px;
+}
+section .logo {
+  width: 50vh;
+  height: 50vh;
   background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-.pic_two:hover::after {
-  transform: translateY(0);
-}
-
-.pic_two::after {
-  content: "Nuevo Ingreso";
-  font-size: 2rem;
-  color: rgb(238, 238, 238);
-  text-shadow: 1px 3px 2px rgb(0, 0, 0);
-  background-color: rgba(255, 0, 255, 0.219);
+  background-size: cover;
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-  z-index: -10;
+  top: 50px;
+  filter: drop-shadow(0px 7px 21px rgba(255, 0, 234, 0.7725490196));
+  animation: rotar 10s linear infinite;
+}
+section .logo:hover {
+  cursor: pointer;
+}
+@keyframes rotar {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .pic_one {
-    z-index: -10;
-  }
-  .pic_two {
-    display: none;
-  }
   section {
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-left: -55%;
+    height: 500px;
+    width: 100vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    perspective: 600px;
   }
-  .pic_three {
-    z-index: -10;
+  section .logo {
+    width: 50vh;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50px;
+    filter: drop-shadow(0px 7px 21px rgba(255, 0, 234, 0.7725490196));
+    animation: rotar 10s linear infinite;
+  }
+  section .logo:hover {
+    cursor: pointer;
+  }
+  @keyframes rotar {
+    from {
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(-180deg);
+    }
   }
 }
-.pic_three {
-  width: 300px;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-image: url(/img/mujer/sweater\ verde.jpg);
-  filter: drop-shadow(20px 10px 10px rgb(5, 0, 0));
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-.pic_three:hover::after {
-  transform: translateY(0);
+.logoc {
+  margin-left: 1em;
+  margin-top: -5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  color: rgb(228, 226, 226);
+  text-shadow: 1px 5px 5px black;
+  z-index: 10;
 }
 
-.pic_three::after {
-  content: "Nuevo Ingreso";
-  font-size: 2rem;
-  color: rgb(238, 238, 238);
-  text-shadow: 1px 3px 2px rgb(0, 0, 0);
-  background-color: rgba(255, 0, 255, 0.219);
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-  z-index: -10;
+.icon__menu {
+  font-size: 26px;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
+.header_superiorc {
+  margin-left: 100px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1200vh;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 20px;
+  z-index: 10;
+}
+
+.logoc {
   color: rgb(199, 199, 199);
   text-shadow: 1px 4px 5px black;
 }
@@ -501,23 +514,28 @@ h1 {
   margin-top: 200px;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 form {
+  margin-left: 400px;
+  margin-top: 50px;
   padding: 50px 55px;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   border-radius: 20px;
   text-align: center;
   width: 340px;
+  height: 600px;
+}
+
+.inputc {
+  margin-left: 10px;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
   text-align: flex;
+  height: auto;
 }
 
 h2 {
@@ -568,6 +586,7 @@ input::placeholder textarea::placeholder {
   background-color: gold;
   box-shadow: 0 0 20px rgba(4, 14, 3, 0.4);
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .btn:hover {
@@ -585,6 +604,29 @@ input::placeholder textarea::placeholder {
   input {
     padding: 15px;
   }
+}
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px black;
+}
+
+.bodynos {
+  background-image: url(/img/Picsart_23-06-27_02-46-46-307.png);
+  background-size: cover;
+}
+
+article {
+  color: rgb(0, 0, 0);
+  margin-right: 20px;
+  margin-left: 20px;
+  font-weight: 800;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgb(235, 235, 235);
+}
+
+.footer_nos {
+  margin-top: 25%;
 }
 
 /*# sourceMappingURL=style.css.map */

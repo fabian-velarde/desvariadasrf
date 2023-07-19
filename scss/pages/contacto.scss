@@ -1,31 +1,89 @@
+.logoc{
+    margin-left: 1em;
+    margin-top: -5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: rgb(228, 226, 226);
+    text-shadow: 1px 5px 5px black; 
+    z-index: 10;
+}
 
-.logo {
+
+// .headerc {
+//     width: 100%;
+//     position: static;
+//     top: 0;
+//     left: 0; 
+// }
+
+
+
+
+.icon__menu {
+    font-size: 26px;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.header_superiorc {
+    margin-left: 100px;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200vh;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 20px;
+    z-index: 10;
+}
+
+
+
+
+
+
+.logoc{
     color: $color-title;
     text-shadow: 1px 4px 5px black;
 }
+
+
+
 
 .bd__contact {
     margin-bottom: 100px;
     margin-top: 200px;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    @include center;
 }
 
 
 form {
+    margin-left: 400px;
+    margin-top: 50px;
     padding: 50px 55px;
     box-shadow: 0 0 20px rgb(0, 0, 0);
     border-radius: 20px;
     text-align: center;
     width: 340px;
+    height: 600px;
 }
 
+.inputc{
+    margin-left: 10px;
+}
 
 .input-group{
     display: flex;
     flex-direction: column;
     text-align: flex;
+height: auto;
+    
 }
 
 
@@ -41,6 +99,8 @@ label{
     margin-bottom: 15px;
 }
 
+
+
 input textarea{
     padding: 17px 25px;
     border-radius: 25px;
@@ -49,12 +109,11 @@ input textarea{
     border: 2px solid rgb(4, 0, 8);
     background-color: rgb(2, 14, 10);
     outline: none;
-
 }
 
 
 input::placeholder textarea::placeholder {
-    color:rgb(231, 7, 252)
+    color:rgb(231, 7, 252);
 }
 
 
@@ -64,6 +123,7 @@ input::placeholder textarea::placeholder {
     justify-content: space-between;
     text-align: center;
 }
+
 
 
 .form-txt a{
@@ -80,6 +140,7 @@ input::placeholder textarea::placeholder {
     background-color: gold;
     box-shadow: 0 0 20px rgba(4, 14, 3, 0.4);
     cursor: pointer;
+    margin-left: 10px;
 }
 
 
